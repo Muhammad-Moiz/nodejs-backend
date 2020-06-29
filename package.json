@@ -1,0 +1,20 @@
+{
+  "name": "nodejs-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Muhammad-Moiz/nodejs-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Muhammad-Moiz/nodejs-backend/issues"
+  },
+  "homepage": "https://github.com/Muhammad-Moiz/nodejs-backend#readme"
+}
