@@ -9,6 +9,10 @@ var userSchema = new mongoose.Schema({
     email: {
         type: String,
         required: 'This field is required.'
+    },
+    password: {
+        type: String,
+        required: 'Tshis field is required.'
     }
  
 });

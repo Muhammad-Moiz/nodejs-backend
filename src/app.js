@@ -1,3 +1,5 @@
+require('./models/db');
+const userSeed = require('./seeds/userSeed');
 const http = require('http');
 const express = require('express');
 const path = require('path');
@@ -7,18 +9,23 @@ const bodyparser = require('body-parser')
 const hostname = '127.0.0.1';
 const port = 3000;
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World');
-});
+const itemController = require('./controllers/itemController');
+const userController = require('./controllers/userController');
 
 
+
+userSeed();
 var app = express();
 app.use(bodyparser.urlencoded({
     extended: true
 }));
 
-server.listen(port, hostname, () => {
+app.use(bodyparser.json());
+  
+app.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });
+
+app.use('/item', itemController);
+
+app.use('/user', userController);

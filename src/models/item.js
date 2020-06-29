@@ -7,7 +7,7 @@ var itemSchema = new mongoose.Schema({
         required: 'This field is required.'
     },
     status: {
-        type: String
+        type: Boolean
     }
  
 });
