@@ -25,6 +25,39 @@ router.get("/", (req, res) => {
   }
 });
 
+router.get("/markDone/:id", (req, res) => {
+  console.log(req.params.id)
+  try {
+    Items.update(
+      {
+        "_id":req.params.id
+      },
+      {
+        $set :
+        {
+           "status" : true
+        }
+      })
+      .then((doc)=>{
+        console.log("success")
+        res.send("updated");
+      })
+      .catch((err)=>{
+        res.status(err.status || 500);
+        res.json({
+          message: err.message,
+          error: err,
+        });
+      });
+  } catch (e) {
+    res.status(err.status || 500);
+    res.json({
+      message: err.message,
+      error: err,
+    });
+  }
+});
+
 router.get("/delete/:id", (req, res) => {
   try {
     Items.findByIdAndRemove(req.params.id, (err, doc) => {
