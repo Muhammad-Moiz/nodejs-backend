@@ -12,17 +12,19 @@ router.post("/login", (req, res) => {
         if (doc) {
           console.log(doc.password);
           if (password == doc.password) {
-            res.json("Successfully login");
+            return res.json("Successfully login");
           } else {
-            res.json("login failed");
+            res.status(500);
+            return res.json("login failed");
           }
         } else {
-          res.json("email not exist");
+          res.status(500);
+          return res.json("email not exist");
         }
       } else if (err) {
         console.log("error in");
         res.status(err.status || 500);
-        res.json({
+        return res.json({
           message: err.message,
           error: err,
         });
