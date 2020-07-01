@@ -80,7 +80,7 @@ router.post("/insert", (req, res) => {
   try {
     var item = new Items();
     item.task = req.body.task;
-    item.status = req.body.status;
+    item.status = false;
 
     item.save((err, doc) => {
       if (!err) {
