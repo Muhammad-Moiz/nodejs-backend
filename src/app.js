@@ -7,7 +7,7 @@ const exphbs = require('express-handlebars');
 const bodyparser = require('body-parser')
 
 const hostname = '127.0.0.1';
-const port = 3000;
+const port = process.env.PORT || 3000  ;
 
 const itemController = require('./controllers/itemController');
 const userController = require('./controllers/userController');
