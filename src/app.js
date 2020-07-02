@@ -6,7 +6,7 @@ const path = require('path');
 const exphbs = require('express-handlebars');
 const bodyparser = require('body-parser')
 
-const hostname = '137.59.218.18/32';
+const hostname = '137.59.218.18';
 const port = process.env.PORT || 3000  ;
 
 const itemController = require('./controllers/itemController');
