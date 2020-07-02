@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
  
  
-const CONNECTION_URI ="mongodb+srv://muhammad-moiz:moiz786110@fyp-49lay.mongodb.net/<dbname>?retryWrites=true&w=majority" || 'mongodb://localhost:27017/mydb';
+const CONNECTION_URI ="mongodb+srv://muhammad-moiz:moiz786110@fyp-49lay.mongodb.net/mydb?retryWrites=true&w=majority" || 'mongodb://localhost:27017/mydb';
 
 mongoose.connect( CONNECTION_URI , { useNewUrlParser: true }, (err) => {
     if (!err) { 
