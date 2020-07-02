@@ -11,7 +11,7 @@ mongoose.connect( CONNECTION_URI , { useNewUrlParser: true }, (err) => {
     else { console.log('Error in DB connection : ' + err) }
 });
 
- 
+
 require('./item');
 require('./user');
 
