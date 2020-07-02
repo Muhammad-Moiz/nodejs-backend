@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const CONNECTION_URI ="mongodb+srv://muhammad-moiz:moiz786110@fyp-49lay.mongodb.net/mydb?retryWrites=true&w=majority";
+const CONNECTION_URI ="mongodb+srv://muhammad-moiz:hhMwl6nRSWaEXbKs@fyp-49lay.mongodb.net/mydb?retryWrites=true&w=majority";
 
 mongoose.connect( CONNECTION_URI , { useNewUrlParser: true }, (err) => {
     if (!err) {
