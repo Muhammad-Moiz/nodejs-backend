@@ -1,5 +1,5 @@
 # nodejs-backend
-1 - Run: Clone git repo: https://github.com/Muhammad-Moiz/nodejs-backend.git   		
+1 - Run: git Clone https://github.com/Muhammad-Moiz/nodejs-backend.git   		
 
 2 - Run: cd nodejs-backend 
 
