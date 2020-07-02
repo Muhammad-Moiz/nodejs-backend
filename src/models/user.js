@@ -12,7 +12,7 @@ var userSchema = new mongoose.Schema({
     },
     password: {
         type: String,
-        required: 'Tshis field is required.'
+        required: 'This field is required.'
     }
  
 });
