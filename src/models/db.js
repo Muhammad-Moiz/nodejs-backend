@@ -1,11 +1,10 @@
 const mongoose = require('mongoose');
 
-const uri = "mongodb+srv://muhammad-moiz:moiz786110@fyp-49lay.mongodb.net/<dbname>?retryWrites=true&w=majority";
-
  
-const CONNECTION_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/mydb';
+ 
+const CONNECTION_URI ="mongodb+srv://muhammad-moiz:moiz786110@fyp-49lay.mongodb.net/<dbname>?retryWrites=true&w=majority" || 'mongodb://localhost:27017/mydb';
 
-mongoose.connect( uri , { useNewUrlParser: true }, (err) => {
+mongoose.connect( CONNECTION_URI , { useNewUrlParser: true }, (err) => {
     if (!err) { 
         console.log('MongoDB Connection Succeeded.');
     }
