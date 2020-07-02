@@ -6,10 +6,10 @@ const path = require('path');
 const exphbs = require('express-handlebars');
 const bodyparser = require('body-parser')
 
-const hostname =  process.env.IP ||'127.0.0.1';
+const hostname =   '127.0.0.1';
 const port = process.env.PORT || 3000  ;
 
-console.log(process.env.PORT );
+console.log(process.env.IP );
 const itemController = require('./controllers/itemController');
 const userController = require('./controllers/userController');
 
