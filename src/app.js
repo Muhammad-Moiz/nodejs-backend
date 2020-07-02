@@ -6,7 +6,7 @@ const path = require('path');
 const exphbs = require('express-handlebars');
 const bodyparser = require('body-parser')
 
-const hostname =   '127.0.0.1';
+const hostname =   '0.0.0.0';
 const port = process.env.PORT || 3000  ;
 
 console.log(process.env.IP );
