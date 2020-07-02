@@ -14,13 +14,21 @@ console.log(process.env.IP );
 const itemController = require('./controllers/itemController');
 const userController = require('./controllers/userController');
 
-app.use(cors());
-
 userSeed();
 var app = express();
 app.use(bodyparser.urlencoded({
     extended: true
 }));
+
+// allow all CORS Request
+app.use(cors());// Add headers
+app.use(function (req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    next();
+});
 
 app.use(bodyparser.json());
   
